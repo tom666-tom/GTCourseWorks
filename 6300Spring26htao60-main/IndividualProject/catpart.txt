@@ -1,0 +1,65 @@
+# TSL for transmutetxt 
+
+FileExistence:
+    exists.
+    does_not_exist. [error]
+
+FileContent:
+    empty. [property file_empty]
+    single_line.
+    multiple_lines.
+
+TruncateOption:
+    no_truncate. [property trunc_absent]
+    trunc_valid. [if !file_empty][property trunc_present_valid]
+
+TruncateNum:
+    not_applicable. [if trunc_absent]
+    num_0. [single]
+    num_50. [single]
+    num_100. [single]
+    num_negative. [error]
+    num_gt_100. [error]
+    num_non_integer. [error]
+
+RemoveEmptyLines:
+    no_remove.
+    remove. [single]
+
+ReplaceOption:
+    no_replace. [property replace_absent]
+    replace. [if !file_empty][property replace_present]
+
+ReplaceOld:
+    not_applicable. [if replace_absent]
+    old_empty. [error]
+    old_non_empty. [if replace_present]
+
+ReplaceNew:
+    not_applicable. [if replace_absent]
+    new_empty. [if replace_present]
+    new_non_empty. [if replace_present]
+
+FormatOption:
+    no_format. [property format_absent]
+    format. [if !file_empty][property format_present]
+
+FormatStyle:
+    not_applicable. [if format_absent]
+    bold. [single]
+    italic. [single]
+    code. [single]
+
+FormatSubstring:
+    not_applicable. [if format_absent]
+    substring_empty. [error]
+    substring_non_empty. [if format_present]
+
+GlobalReplace:
+    not_applicable. [if format_absent]
+    no_global. [if format_present]
+    global. [if format_present]
+
+AddLineNumber:
+    no_number.
+    number. [single]

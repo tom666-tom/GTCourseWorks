@@ -1,0 +1,648 @@
+Test Case 1		<error>
+	FileExistence  : does_not_exist 
+
+
+Test Case 2		<single>
+	TruncateNum  : num_0 
+
+
+Test Case 3		<single>
+	TruncateNum  : num_50 
+
+
+Test Case 4		<single>
+	TruncateNum  : num_100 
+
+
+Test Case 5		<error>
+	TruncateNum  : num_negative 
+
+
+Test Case 6		<error>
+	TruncateNum  : num_gt_100 
+
+
+Test Case 7		<error>
+	TruncateNum  : num_non_integer 
+
+
+Test Case 8		<single>
+	RemoveEmptyLines  : remove 
+
+
+Test Case 9		<error>
+	ReplaceOld  : old_empty 
+
+
+Test Case 10		<single>
+	FormatStyle  : bold 
+
+
+Test Case 11		<single>
+	FormatStyle  : italic 
+
+
+Test Case 12		<single>
+	FormatStyle  : code 
+
+
+Test Case 13		<error>
+	FormatSubstring  : substring_empty 
+
+
+Test Case 14		<single>
+	AddLineNumber  : number 
+
+
+Test Case 15
+	FileExistence     : exists         
+	FileContent       : empty          
+	TruncateOption    : no_truncate    
+	TruncateNum       : not_applicable 	(follows [if trunc_absent])
+	RemoveEmptyLines  : no_remove      
+	ReplaceOption     : no_replace     
+	ReplaceOld        : not_applicable 	(follows [if replace_absent])
+	ReplaceNew        : not_applicable 	(follows [if replace_absent])
+	FormatOption      : no_format      
+	FormatStyle       : not_applicable 	(follows [if format_absent])
+	FormatSubstring   : not_applicable 	(follows [if format_absent])
+	GlobalReplace     : not_applicable 	(follows [if format_absent])
+	AddLineNumber     : no_number      
+
+
+Test Case 16
+	FileExistence     : exists         
+	FileContent       : single_line    
+	TruncateOption    : no_truncate    
+	TruncateNum       : not_applicable 	(follows [if trunc_absent])
+	RemoveEmptyLines  : no_remove      
+	ReplaceOption     : no_replace     
+	ReplaceOld        : not_applicable 	(follows [if replace_absent])
+	ReplaceNew        : not_applicable 	(follows [if replace_absent])
+	FormatOption      : no_format      
+	FormatStyle       : not_applicable 	(follows [if format_absent])
+	FormatSubstring   : not_applicable 	(follows [if format_absent])
+	GlobalReplace     : not_applicable 	(follows [if format_absent])
+	AddLineNumber     : no_number      
+
+
+Test Case 17
+	FileExistence     : exists              
+	FileContent       : single_line         
+	TruncateOption    : no_truncate         
+	TruncateNum       : not_applicable      	(follows [if trunc_absent])
+	RemoveEmptyLines  : no_remove           
+	ReplaceOption     : no_replace          
+	ReplaceOld        : not_applicable      	(follows [if replace_absent])
+	ReplaceNew        : not_applicable      	(follows [if replace_absent])
+	FormatOption      : format              	(follows [if !file_empty])
+	FormatStyle       : N/A                 
+	FormatSubstring   : substring_non_empty 	(follows [if format_present])
+	GlobalReplace     : no_global           	(follows [if format_present])
+	AddLineNumber     : no_number           
+
+
+Test Case 18
+	FileExistence     : exists              
+	FileContent       : single_line         
+	TruncateOption    : no_truncate         
+	TruncateNum       : not_applicable      	(follows [if trunc_absent])
+	RemoveEmptyLines  : no_remove           
+	ReplaceOption     : no_replace          
+	ReplaceOld        : not_applicable      	(follows [if replace_absent])
+	ReplaceNew        : not_applicable      	(follows [if replace_absent])
+	FormatOption      : format              	(follows [if !file_empty])
+	FormatStyle       : N/A                 
+	FormatSubstring   : substring_non_empty 	(follows [if format_present])
+	GlobalReplace     : global              	(follows [if format_present])
+	AddLineNumber     : no_number           
+
+
+Test Case 19
+	FileExistence     : exists         
+	FileContent       : single_line    
+	TruncateOption    : no_truncate    
+	TruncateNum       : not_applicable 	(follows [if trunc_absent])
+	RemoveEmptyLines  : no_remove      
+	ReplaceOption     : replace        	(follows [if !file_empty])
+	ReplaceOld        : old_non_empty  	(follows [if replace_present])
+	ReplaceNew        : new_empty      	(follows [if replace_present])
+	FormatOption      : no_format      
+	FormatStyle       : not_applicable 	(follows [if format_absent])
+	FormatSubstring   : not_applicable 	(follows [if format_absent])
+	GlobalReplace     : not_applicable 	(follows [if format_absent])
+	AddLineNumber     : no_number      
+
+
+Test Case 20
+	FileExistence     : exists              
+	FileContent       : single_line         
+	TruncateOption    : no_truncate         
+	TruncateNum       : not_applicable      	(follows [if trunc_absent])
+	RemoveEmptyLines  : no_remove           
+	ReplaceOption     : replace             	(follows [if !file_empty])
+	ReplaceOld        : old_non_empty       	(follows [if replace_present])
+	ReplaceNew        : new_empty           	(follows [if replace_present])
+	FormatOption      : format              	(follows [if !file_empty])
+	FormatStyle       : N/A                 
+	FormatSubstring   : substring_non_empty 	(follows [if format_present])
+	GlobalReplace     : no_global           	(follows [if format_present])
+	AddLineNumber     : no_number           
+
+
+Test Case 21
+	FileExistence     : exists              
+	FileContent       : single_line         
+	TruncateOption    : no_truncate         
+	TruncateNum       : not_applicable      	(follows [if trunc_absent])
+	RemoveEmptyLines  : no_remove           
+	ReplaceOption     : replace             	(follows [if !file_empty])
+	ReplaceOld        : old_non_empty       	(follows [if replace_present])
+	ReplaceNew        : new_empty           	(follows [if replace_present])
+	FormatOption      : format              	(follows [if !file_empty])
+	FormatStyle       : N/A                 
+	FormatSubstring   : substring_non_empty 	(follows [if format_present])
+	GlobalReplace     : global              	(follows [if format_present])
+	AddLineNumber     : no_number           
+
+
+Test Case 22
+	FileExistence     : exists         
+	FileContent       : single_line    
+	TruncateOption    : no_truncate    
+	TruncateNum       : not_applicable 	(follows [if trunc_absent])
+	RemoveEmptyLines  : no_remove      
+	ReplaceOption     : replace        	(follows [if !file_empty])
+	ReplaceOld        : old_non_empty  	(follows [if replace_present])
+	ReplaceNew        : new_non_empty  	(follows [if replace_present])
+	FormatOption      : no_format      
+	FormatStyle       : not_applicable 	(follows [if format_absent])
+	FormatSubstring   : not_applicable 	(follows [if format_absent])
+	GlobalReplace     : not_applicable 	(follows [if format_absent])
+	AddLineNumber     : no_number      
+
+
+Test Case 23
+	FileExistence     : exists              
+	FileContent       : single_line         
+	TruncateOption    : no_truncate         
+	TruncateNum       : not_applicable      	(follows [if trunc_absent])
+	RemoveEmptyLines  : no_remove           
+	ReplaceOption     : replace             	(follows [if !file_empty])
+	ReplaceOld        : old_non_empty       	(follows [if replace_present])
+	ReplaceNew        : new_non_empty       	(follows [if replace_present])
+	FormatOption      : format              	(follows [if !file_empty])
+	FormatStyle       : N/A                 
+	FormatSubstring   : substring_non_empty 	(follows [if format_present])
+	GlobalReplace     : no_global           	(follows [if format_present])
+	AddLineNumber     : no_number           
+
+
+Test Case 24
+	FileExistence     : exists              
+	FileContent       : single_line         
+	TruncateOption    : no_truncate         
+	TruncateNum       : not_applicable      	(follows [if trunc_absent])
+	RemoveEmptyLines  : no_remove           
+	ReplaceOption     : replace             	(follows [if !file_empty])
+	ReplaceOld        : old_non_empty       	(follows [if replace_present])
+	ReplaceNew        : new_non_empty       	(follows [if replace_present])
+	FormatOption      : format              	(follows [if !file_empty])
+	FormatStyle       : N/A                 
+	FormatSubstring   : substring_non_empty 	(follows [if format_present])
+	GlobalReplace     : global              	(follows [if format_present])
+	AddLineNumber     : no_number           
+
+
+Test Case 25
+	FileExistence     : exists         
+	FileContent       : single_line    
+	TruncateOption    : trunc_valid    	(follows [if !file_empty])
+	TruncateNum       : N/A            
+	RemoveEmptyLines  : no_remove      
+	ReplaceOption     : no_replace     
+	ReplaceOld        : not_applicable 	(follows [if replace_absent])
+	ReplaceNew        : not_applicable 	(follows [if replace_absent])
+	FormatOption      : no_format      
+	FormatStyle       : not_applicable 	(follows [if format_absent])
+	FormatSubstring   : not_applicable 	(follows [if format_absent])
+	GlobalReplace     : not_applicable 	(follows [if format_absent])
+	AddLineNumber     : no_number      
+
+
+Test Case 26
+	FileExistence     : exists              
+	FileContent       : single_line         
+	TruncateOption    : trunc_valid         	(follows [if !file_empty])
+	TruncateNum       : N/A                 
+	RemoveEmptyLines  : no_remove           
+	ReplaceOption     : no_replace          
+	ReplaceOld        : not_applicable      	(follows [if replace_absent])
+	ReplaceNew        : not_applicable      	(follows [if replace_absent])
+	FormatOption      : format              	(follows [if !file_empty])
+	FormatStyle       : N/A                 
+	FormatSubstring   : substring_non_empty 	(follows [if format_present])
+	GlobalReplace     : no_global           	(follows [if format_present])
+	AddLineNumber     : no_number           
+
+
+Test Case 27
+	FileExistence     : exists              
+	FileContent       : single_line         
+	TruncateOption    : trunc_valid         	(follows [if !file_empty])
+	TruncateNum       : N/A                 
+	RemoveEmptyLines  : no_remove           
+	ReplaceOption     : no_replace          
+	ReplaceOld        : not_applicable      	(follows [if replace_absent])
+	ReplaceNew        : not_applicable      	(follows [if replace_absent])
+	FormatOption      : format              	(follows [if !file_empty])
+	FormatStyle       : N/A                 
+	FormatSubstring   : substring_non_empty 	(follows [if format_present])
+	GlobalReplace     : global              	(follows [if format_present])
+	AddLineNumber     : no_number           
+
+
+Test Case 28
+	FileExistence     : exists         
+	FileContent       : single_line    
+	TruncateOption    : trunc_valid    	(follows [if !file_empty])
+	TruncateNum       : N/A            
+	RemoveEmptyLines  : no_remove      
+	ReplaceOption     : replace        	(follows [if !file_empty])
+	ReplaceOld        : old_non_empty  	(follows [if replace_present])
+	ReplaceNew        : new_empty      	(follows [if replace_present])
+	FormatOption      : no_format      
+	FormatStyle       : not_applicable 	(follows [if format_absent])
+	FormatSubstring   : not_applicable 	(follows [if format_absent])
+	GlobalReplace     : not_applicable 	(follows [if format_absent])
+	AddLineNumber     : no_number      
+
+
+Test Case 29
+	FileExistence     : exists              
+	FileContent       : single_line         
+	TruncateOption    : trunc_valid         	(follows [if !file_empty])
+	TruncateNum       : N/A                 
+	RemoveEmptyLines  : no_remove           
+	ReplaceOption     : replace             	(follows [if !file_empty])
+	ReplaceOld        : old_non_empty       	(follows [if replace_present])
+	ReplaceNew        : new_empty           	(follows [if replace_present])
+	FormatOption      : format              	(follows [if !file_empty])
+	FormatStyle       : N/A                 
+	FormatSubstring   : substring_non_empty 	(follows [if format_present])
+	GlobalReplace     : no_global           	(follows [if format_present])
+	AddLineNumber     : no_number           
+
+
+Test Case 30
+	FileExistence     : exists              
+	FileContent       : single_line         
+	TruncateOption    : trunc_valid         	(follows [if !file_empty])
+	TruncateNum       : N/A                 
+	RemoveEmptyLines  : no_remove           
+	ReplaceOption     : replace             	(follows [if !file_empty])
+	ReplaceOld        : old_non_empty       	(follows [if replace_present])
+	ReplaceNew        : new_empty           	(follows [if replace_present])
+	FormatOption      : format              	(follows [if !file_empty])
+	FormatStyle       : N/A                 
+	FormatSubstring   : substring_non_empty 	(follows [if format_present])
+	GlobalReplace     : global              	(follows [if format_present])
+	AddLineNumber     : no_number           
+
+
+Test Case 31
+	FileExistence     : exists         
+	FileContent       : single_line    
+	TruncateOption    : trunc_valid    	(follows [if !file_empty])
+	TruncateNum       : N/A            
+	RemoveEmptyLines  : no_remove      
+	ReplaceOption     : replace        	(follows [if !file_empty])
+	ReplaceOld        : old_non_empty  	(follows [if replace_present])
+	ReplaceNew        : new_non_empty  	(follows [if replace_present])
+	FormatOption      : no_format      
+	FormatStyle       : not_applicable 	(follows [if format_absent])
+	FormatSubstring   : not_applicable 	(follows [if format_absent])
+	GlobalReplace     : not_applicable 	(follows [if format_absent])
+	AddLineNumber     : no_number      
+
+
+Test Case 32
+	FileExistence     : exists              
+	FileContent       : single_line         
+	TruncateOption    : trunc_valid         	(follows [if !file_empty])
+	TruncateNum       : N/A                 
+	RemoveEmptyLines  : no_remove           
+	ReplaceOption     : replace             	(follows [if !file_empty])
+	ReplaceOld        : old_non_empty       	(follows [if replace_present])
+	ReplaceNew        : new_non_empty       	(follows [if replace_present])
+	FormatOption      : format              	(follows [if !file_empty])
+	FormatStyle       : N/A                 
+	FormatSubstring   : substring_non_empty 	(follows [if format_present])
+	GlobalReplace     : no_global           	(follows [if format_present])
+	AddLineNumber     : no_number           
+
+
+Test Case 33
+	FileExistence     : exists              
+	FileContent       : single_line         
+	TruncateOption    : trunc_valid         	(follows [if !file_empty])
+	TruncateNum       : N/A                 
+	RemoveEmptyLines  : no_remove           
+	ReplaceOption     : replace             	(follows [if !file_empty])
+	ReplaceOld        : old_non_empty       	(follows [if replace_present])
+	ReplaceNew        : new_non_empty       	(follows [if replace_present])
+	FormatOption      : format              	(follows [if !file_empty])
+	FormatStyle       : N/A                 
+	FormatSubstring   : substring_non_empty 	(follows [if format_present])
+	GlobalReplace     : global              	(follows [if format_present])
+	AddLineNumber     : no_number           
+
+
+Test Case 34
+	FileExistence     : exists         
+	FileContent       : multiple_lines 
+	TruncateOption    : no_truncate    
+	TruncateNum       : not_applicable 	(follows [if trunc_absent])
+	RemoveEmptyLines  : no_remove      
+	ReplaceOption     : no_replace     
+	ReplaceOld        : not_applicable 	(follows [if replace_absent])
+	ReplaceNew        : not_applicable 	(follows [if replace_absent])
+	FormatOption      : no_format      
+	FormatStyle       : not_applicable 	(follows [if format_absent])
+	FormatSubstring   : not_applicable 	(follows [if format_absent])
+	GlobalReplace     : not_applicable 	(follows [if format_absent])
+	AddLineNumber     : no_number      
+
+
+Test Case 35
+	FileExistence     : exists              
+	FileContent       : multiple_lines      
+	TruncateOption    : no_truncate         
+	TruncateNum       : not_applicable      	(follows [if trunc_absent])
+	RemoveEmptyLines  : no_remove           
+	ReplaceOption     : no_replace          
+	ReplaceOld        : not_applicable      	(follows [if replace_absent])
+	ReplaceNew        : not_applicable      	(follows [if replace_absent])
+	FormatOption      : format              	(follows [if !file_empty])
+	FormatStyle       : N/A                 
+	FormatSubstring   : substring_non_empty 	(follows [if format_present])
+	GlobalReplace     : no_global           	(follows [if format_present])
+	AddLineNumber     : no_number           
+
+
+Test Case 36
+	FileExistence     : exists              
+	FileContent       : multiple_lines      
+	TruncateOption    : no_truncate         
+	TruncateNum       : not_applicable      	(follows [if trunc_absent])
+	RemoveEmptyLines  : no_remove           
+	ReplaceOption     : no_replace          
+	ReplaceOld        : not_applicable      	(follows [if replace_absent])
+	ReplaceNew        : not_applicable      	(follows [if replace_absent])
+	FormatOption      : format              	(follows [if !file_empty])
+	FormatStyle       : N/A                 
+	FormatSubstring   : substring_non_empty 	(follows [if format_present])
+	GlobalReplace     : global              	(follows [if format_present])
+	AddLineNumber     : no_number           
+
+
+Test Case 37
+	FileExistence     : exists         
+	FileContent       : multiple_lines 
+	TruncateOption    : no_truncate    
+	TruncateNum       : not_applicable 	(follows [if trunc_absent])
+	RemoveEmptyLines  : no_remove      
+	ReplaceOption     : replace        	(follows [if !file_empty])
+	ReplaceOld        : old_non_empty  	(follows [if replace_present])
+	ReplaceNew        : new_empty      	(follows [if replace_present])
+	FormatOption      : no_format      
+	FormatStyle       : not_applicable 	(follows [if format_absent])
+	FormatSubstring   : not_applicable 	(follows [if format_absent])
+	GlobalReplace     : not_applicable 	(follows [if format_absent])
+	AddLineNumber     : no_number      
+
+
+Test Case 38
+	FileExistence     : exists              
+	FileContent       : multiple_lines      
+	TruncateOption    : no_truncate         
+	TruncateNum       : not_applicable      	(follows [if trunc_absent])
+	RemoveEmptyLines  : no_remove           
+	ReplaceOption     : replace             	(follows [if !file_empty])
+	ReplaceOld        : old_non_empty       	(follows [if replace_present])
+	ReplaceNew        : new_empty           	(follows [if replace_present])
+	FormatOption      : format              	(follows [if !file_empty])
+	FormatStyle       : N/A                 
+	FormatSubstring   : substring_non_empty 	(follows [if format_present])
+	GlobalReplace     : no_global           	(follows [if format_present])
+	AddLineNumber     : no_number           
+
+
+Test Case 39
+	FileExistence     : exists              
+	FileContent       : multiple_lines      
+	TruncateOption    : no_truncate         
+	TruncateNum       : not_applicable      	(follows [if trunc_absent])
+	RemoveEmptyLines  : no_remove           
+	ReplaceOption     : replace             	(follows [if !file_empty])
+	ReplaceOld        : old_non_empty       	(follows [if replace_present])
+	ReplaceNew        : new_empty           	(follows [if replace_present])
+	FormatOption      : format              	(follows [if !file_empty])
+	FormatStyle       : N/A                 
+	FormatSubstring   : substring_non_empty 	(follows [if format_present])
+	GlobalReplace     : global              	(follows [if format_present])
+	AddLineNumber     : no_number           
+
+
+Test Case 40
+	FileExistence     : exists         
+	FileContent       : multiple_lines 
+	TruncateOption    : no_truncate    
+	TruncateNum       : not_applicable 	(follows [if trunc_absent])
+	RemoveEmptyLines  : no_remove      
+	ReplaceOption     : replace        	(follows [if !file_empty])
+	ReplaceOld        : old_non_empty  	(follows [if replace_present])
+	ReplaceNew        : new_non_empty  	(follows [if replace_present])
+	FormatOption      : no_format      
+	FormatStyle       : not_applicable 	(follows [if format_absent])
+	FormatSubstring   : not_applicable 	(follows [if format_absent])
+	GlobalReplace     : not_applicable 	(follows [if format_absent])
+	AddLineNumber     : no_number      
+
+
+Test Case 41
+	FileExistence     : exists              
+	FileContent       : multiple_lines      
+	TruncateOption    : no_truncate         
+	TruncateNum       : not_applicable      	(follows [if trunc_absent])
+	RemoveEmptyLines  : no_remove           
+	ReplaceOption     : replace             	(follows [if !file_empty])
+	ReplaceOld        : old_non_empty       	(follows [if replace_present])
+	ReplaceNew        : new_non_empty       	(follows [if replace_present])
+	FormatOption      : format              	(follows [if !file_empty])
+	FormatStyle       : N/A                 
+	FormatSubstring   : substring_non_empty 	(follows [if format_present])
+	GlobalReplace     : no_global           	(follows [if format_present])
+	AddLineNumber     : no_number           
+
+
+Test Case 42
+	FileExistence     : exists              
+	FileContent       : multiple_lines      
+	TruncateOption    : no_truncate         
+	TruncateNum       : not_applicable      	(follows [if trunc_absent])
+	RemoveEmptyLines  : no_remove           
+	ReplaceOption     : replace             	(follows [if !file_empty])
+	ReplaceOld        : old_non_empty       	(follows [if replace_present])
+	ReplaceNew        : new_non_empty       	(follows [if replace_present])
+	FormatOption      : format              	(follows [if !file_empty])
+	FormatStyle       : N/A                 
+	FormatSubstring   : substring_non_empty 	(follows [if format_present])
+	GlobalReplace     : global              	(follows [if format_present])
+	AddLineNumber     : no_number           
+
+
+Test Case 43
+	FileExistence     : exists         
+	FileContent       : multiple_lines 
+	TruncateOption    : trunc_valid    	(follows [if !file_empty])
+	TruncateNum       : N/A            
+	RemoveEmptyLines  : no_remove      
+	ReplaceOption     : no_replace     
+	ReplaceOld        : not_applicable 	(follows [if replace_absent])
+	ReplaceNew        : not_applicable 	(follows [if replace_absent])
+	FormatOption      : no_format      
+	FormatStyle       : not_applicable 	(follows [if format_absent])
+	FormatSubstring   : not_applicable 	(follows [if format_absent])
+	GlobalReplace     : not_applicable 	(follows [if format_absent])
+	AddLineNumber     : no_number      
+
+
+Test Case 44
+	FileExistence     : exists              
+	FileContent       : multiple_lines      
+	TruncateOption    : trunc_valid         	(follows [if !file_empty])
+	TruncateNum       : N/A                 
+	RemoveEmptyLines  : no_remove           
+	ReplaceOption     : no_replace          
+	ReplaceOld        : not_applicable      	(follows [if replace_absent])
+	ReplaceNew        : not_applicable      	(follows [if replace_absent])
+	FormatOption      : format              	(follows [if !file_empty])
+	FormatStyle       : N/A                 
+	FormatSubstring   : substring_non_empty 	(follows [if format_present])
+	GlobalReplace     : no_global           	(follows [if format_present])
+	AddLineNumber     : no_number           
+
+
+Test Case 45
+	FileExistence     : exists              
+	FileContent       : multiple_lines      
+	TruncateOption    : trunc_valid         	(follows [if !file_empty])
+	TruncateNum       : N/A                 
+	RemoveEmptyLines  : no_remove           
+	ReplaceOption     : no_replace          
+	ReplaceOld        : not_applicable      	(follows [if replace_absent])
+	ReplaceNew        : not_applicable      	(follows [if replace_absent])
+	FormatOption      : format              	(follows [if !file_empty])
+	FormatStyle       : N/A                 
+	FormatSubstring   : substring_non_empty 	(follows [if format_present])
+	GlobalReplace     : global              	(follows [if format_present])
+	AddLineNumber     : no_number           
+
+
+Test Case 46
+	FileExistence     : exists         
+	FileContent       : multiple_lines 
+	TruncateOption    : trunc_valid    	(follows [if !file_empty])
+	TruncateNum       : N/A            
+	RemoveEmptyLines  : no_remove      
+	ReplaceOption     : replace        	(follows [if !file_empty])
+	ReplaceOld        : old_non_empty  	(follows [if replace_present])
+	ReplaceNew        : new_empty      	(follows [if replace_present])
+	FormatOption      : no_format      
+	FormatStyle       : not_applicable 	(follows [if format_absent])
+	FormatSubstring   : not_applicable 	(follows [if format_absent])
+	GlobalReplace     : not_applicable 	(follows [if format_absent])
+	AddLineNumber     : no_number      
+
+
+Test Case 47
+	FileExistence     : exists              
+	FileContent       : multiple_lines      
+	TruncateOption    : trunc_valid         	(follows [if !file_empty])
+	TruncateNum       : N/A                 
+	RemoveEmptyLines  : no_remove           
+	ReplaceOption     : replace             	(follows [if !file_empty])
+	ReplaceOld        : old_non_empty       	(follows [if replace_present])
+	ReplaceNew        : new_empty           	(follows [if replace_present])
+	FormatOption      : format              	(follows [if !file_empty])
+	FormatStyle       : N/A                 
+	FormatSubstring   : substring_non_empty 	(follows [if format_present])
+	GlobalReplace     : no_global           	(follows [if format_present])
+	AddLineNumber     : no_number           
+
+
+Test Case 48
+	FileExistence     : exists              
+	FileContent       : multiple_lines      
+	TruncateOption    : trunc_valid         	(follows [if !file_empty])
+	TruncateNum       : N/A                 
+	RemoveEmptyLines  : no_remove           
+	ReplaceOption     : replace             	(follows [if !file_empty])
+	ReplaceOld        : old_non_empty       	(follows [if replace_present])
+	ReplaceNew        : new_empty           	(follows [if replace_present])
+	FormatOption      : format              	(follows [if !file_empty])
+	FormatStyle       : N/A                 
+	FormatSubstring   : substring_non_empty 	(follows [if format_present])
+	GlobalReplace     : global              	(follows [if format_present])
+	AddLineNumber     : no_number           
+
+
+Test Case 49
+	FileExistence     : exists         
+	FileContent       : multiple_lines 
+	TruncateOption    : trunc_valid    	(follows [if !file_empty])
+	TruncateNum       : N/A            
+	RemoveEmptyLines  : no_remove      
+	ReplaceOption     : replace        	(follows [if !file_empty])
+	ReplaceOld        : old_non_empty  	(follows [if replace_present])
+	ReplaceNew        : new_non_empty  	(follows [if replace_present])
+	FormatOption      : no_format      
+	FormatStyle       : not_applicable 	(follows [if format_absent])
+	FormatSubstring   : not_applicable 	(follows [if format_absent])
+	GlobalReplace     : not_applicable 	(follows [if format_absent])
+	AddLineNumber     : no_number      
+
+
+Test Case 50
+	FileExistence     : exists              
+	FileContent       : multiple_lines      
+	TruncateOption    : trunc_valid         	(follows [if !file_empty])
+	TruncateNum       : N/A                 
+	RemoveEmptyLines  : no_remove           
+	ReplaceOption     : replace             	(follows [if !file_empty])
+	ReplaceOld        : old_non_empty       	(follows [if replace_present])
+	ReplaceNew        : new_non_empty       	(follows [if replace_present])
+	FormatOption      : format              	(follows [if !file_empty])
+	FormatStyle       : N/A                 
+	FormatSubstring   : substring_non_empty 	(follows [if format_present])
+	GlobalReplace     : no_global           	(follows [if format_present])
+	AddLineNumber     : no_number           
+
+
+Test Case 51
+	FileExistence     : exists              
+	FileContent       : multiple_lines      
+	TruncateOption    : trunc_valid         	(follows [if !file_empty])
+	TruncateNum       : N/A                 
+	RemoveEmptyLines  : no_remove           
+	ReplaceOption     : replace             	(follows [if !file_empty])
+	ReplaceOld        : old_non_empty       	(follows [if replace_present])
+	ReplaceNew        : new_non_empty       	(follows [if replace_present])
+	FormatOption      : format              	(follows [if !file_empty])
+	FormatStyle       : N/A                 
+	FormatSubstring   : substring_non_empty 	(follows [if format_present])
+	GlobalReplace     : global              	(follows [if format_present])
+	AddLineNumber     : no_number           
+
+
